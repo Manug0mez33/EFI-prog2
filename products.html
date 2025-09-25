@@ -3,192 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freskø products</title>
-        <link rel="stylesheet" href="CSS/styles.css" />
+    <title>Freskø products - Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
-        crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="CSS/styles.css" /> 
 </head>
-<nav class="navbar navbar-expand-md bg-dark">
-      <div
-        class="container-fluid d-flex align-items-center justify-content-between position-relative"
-      >
-        <!-- Logo izquierda -->
-        <a class="navbar-brand" href="#">
-          <img
-            src="IMG/fresko-isotipo.png"
-            alt="Logo"
+<body class="bg-gray-100">
 
-            class="d-inline-block align-text-top"
-          />
+    <nav class="bg-black p-4">
+      <div class="container mx-auto flex items-center justify-between relative">
+        <a href="#">
+          <img src="IMG/fresko-isotipo.png" alt="Logo" class="h-10 w-auto"/>
         </a>
 
-        <!-- Logo centrado horizontalmente, alineado verticalmente -->
-        <img
-          src="IMG/fresko-logo.png"
-          class="logo-name position-absolute start-50 translate-middle-x d-none d-lg-block"
-          alt="Fresko's logo"
-        />
-
-        <!-- Botón hamburguesa y menú -->
-        <button
-          class="navbar-toggler bg-white"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a href="index.html">
-                        <button type="button" class="btn btn-dark">Inicio</button>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html">
-                        <button type="button" class="btn btn-dark">Nosotros</button>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#">
-                        <button type="button" class="btn btn-dark">Artículos</button>
-                    </a>
-                </li>
-            </ul>
+        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden lg:block">
+          <img src="IMG/fresko-logo.png" class="h-8" alt="Fresko's logo" />
         </div>
-    </div>
+
+        <div class="hidden md:flex items-center space-x-2">
+            <a href="index.html" class="text-white hover:bg-gray-800 px-4 py-2 rounded-md transition-colors">Inicio</a>
+            <a href="about.html" class="text-white hover:bg-gray-800 px-4 py-2 rounded-md transition-colors">Nosotros</a>
+            <a href="#" class="text-white hover:bg-gray-800 px-4 py-2 rounded-md transition-colors">Artículos</a>
+        </div>
+
+        <div class="md:hidden">
+            <button id="menu-btn" class="text-white focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+      </div>
+      
+      <div id="mobile-menu" class="hidden md:hidden mt-4">
+        <a href="index.html" class="block text-white text-center py-2 hover:bg-gray-800 rounded-md">Inicio</a>
+        <a href="about.html" class="block text-white text-center py-2 hover:bg-gray-800 rounded-md">Nosotros</a>
+        <a href="#" class="block text-white text-center py-2 hover:bg-gray-800 rounded-md">Artículos</a>
+      </div>
     </nav>
-<body>
     
-    <section class="products-cards container py-5">
-        <div class="row g-4 justify-content-center">
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
-                <div class="card" style="width: 18rem;">
-                    <img src="IMG/FKO_NEGROv3.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Freskø GVNG</h5>
-                        <p class="card-text">Remera oversize negra GVNG</p>
-                        <a href="#" class="btn btn-primary">Ver Más</a>
-                    </div>
+    <section class="container mx-auto py-12 px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-500">
+                <img src="IMG/FKO_NEGROv3.jpg" class="w-full h-64 object-cover" alt="Remera Freskø GVNG">
+                <div class="p-6">
+                    <h5 class="text-xl font-bold mb-2">Freskø GVNG</h5>
+                    <p class="text-gray-700 mb-4">Remera oversize negra GVNG</p>
+                    <a href="#" class="inline-block bg-gray-900 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition-colors">Ver Más</a>
                 </div>
             </div>
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
-                <div class="card" style="width: 18rem;">
-                    <img src="IMG/A1_NEGRO.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Freskø A1 TEE</h5>
-                        <p class="card-text">Remera oversize clásica negra A1</p>
-                        <a href="#" class="btn btn-primary">Ver Más</a>
-                    </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-500">
+                <img src="IMG/A1_NEGRO.jpg" class="w-full h-64 object-cover" alt="Remera Freskø A1 TEE">
+                <div class="p-6">
+                    <h5 class="text-xl font-bold mb-2">Freskø A1 TEE</h5>
+                    <p class="text-gray-700 mb-4">Remera oversize clásica negra A1</p>
+                    <a href="#" class="inline-block bg-gray-900 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition-colors">Ver Más</a>
                 </div>
             </div>
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
-                <div class="card" style="width: 18rem;">
-                    <img src="IMG/A1_BLANCA.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Freskø A1 TEE</h5>
-                        <p class="card-text">Remera oversize clásica blanca A1</p>
-                        <a href="#" class="btn btn-primary">Ver Más</a>
-                    </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-500">
+                <img src="IMG/A1_BLANCA.jpg" class="w-full h-64 object-cover" alt="Remera Freskø A1 TEE Blanca">
+                <div class="p-6">
+                    <h5 class="text-xl font-bold mb-2">Freskø A1 TEE</h5>
+                    <p class="text-gray-700 mb-4">Remera oversize clásica blanca A1</p>
+                    <a href="#" class="inline-block bg-gray-900 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition-colors">Ver Más</a>
                 </div>
             </div>
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
-                <div class="card" style="width: 18rem;">
-                    <img src="IMG/NIGHTMARE_BLANCO.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Freskø Nightmare</h5>
-                        <p class="card-text">Remera oversize blanca NIGHTMARE</p>
-                        <a href="#" class="btn btn-primary">Ver Más</a>
-                    </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-500">
+                <img src="IMG/NIGHTMARE_BLANCO.jpg" class="w-full h-64 object-cover" alt="Remera Freskø Nightmare">
+                <div class="p-6">
+                    <h5 class="text-xl font-bold mb-2">Freskø Nightmare</h5>
+                    <p class="text-gray-700 mb-4">Remera oversize blanca NIGHTMARE</p>
+                    <a href="#" class="inline-block bg-gray-900 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition-colors">Ver Más</a>
                 </div>
             </div>
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
-                <div class="card" style="width: 18rem;">
-                    <img src="IMG/SHOWNOMERCY_BLANCO.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Freskø Show No Mercy</h5>
-                        <p class="card-text">Remera oversize negra SHOW NO MERCY</p>
-                        <a href="#" class="btn btn-primary">Ver Más</a>
-                    </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-500">
+                <img src="IMG/SHOWNOMERCY_BLANCO.jpg" class="w-full h-64 object-cover" alt="Remera Freskø Show No Mercy">
+                <div class="p-6">
+                    <h5 class="text-xl font-bold mb-2">Freskø Show No Mercy</h5>
+                    <p class="text-gray-700 mb-4">Remera oversize negra SHOW NO MERCY</p>
+                    <a href="#" class="inline-block bg-gray-900 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition-colors">Ver Más</a>
                 </div>
             </div>
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
-                <div class="card" style="width: 18rem;">
-                    <img src="IMG/fresko-hoodie6.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Freskø REBELLION hoodie</h5>
-                        <p class="card-text">Buzo canguro negro REBELLION</p>
-                        <a href="#" class="btn btn-primary">Ver Más</a>
-                    </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-500">
+                <img src="IMG/fresko-hoodie6.jpg" class="w-full h-64 object-cover" alt="Buzo Freskø REBELLION">
+                <div class="p-6">
+                    <h5 class="text-xl font-bold mb-2">Freskø REBELLION hoodie</h5>
+                    <p class="text-gray-700 mb-4">Buzo canguro negro REBELLION</p>
+                    <a href="#" class="inline-block bg-gray-900 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition-colors">Ver Más</a>
                 </div>
             </div>
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
-                <div class="card" style="width: 18rem;">
-                    <img src="IMG/Buzo_SoulFreskoV2_NEGRO.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Freskø SOUL hoodie</h5>
-                        <p class="card-text">Buzo canguro negro SOUL</p>
-                        <a href="#" class="btn btn-primary">Ver Más</a>
-                    </div>
+            
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-500">
+                <img src="IMG/Buzo_SoulFreskoV2_NEGRO.jpg" class="w-full h-64 object-cover" alt="Buzo Freskø SOUL">
+                <div class="p-6">
+                    <h5 class="text-xl font-bold mb-2">Freskø SOUL hoodie</h5>
+                    <p class="text-gray-700 mb-4">Buzo canguro negro SOUL</p>
+                    <a href="#" class="inline-block bg-gray-900 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition-colors">Ver Más</a>
                 </div>
             </div>
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
-                <div class="card" style="width: 18rem;">
-                    <img src="IMG/gorra-fresko.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Freskø cap</h5>
-                        <p class="card-text">Gorra A1 negra</p>
-                        <a href="#" class="btn btn-primary">Ver Más</a>
-                    </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-500">
+                <img src="IMG/gorra-fresko.jpg" class="w-full h-64 object-cover" alt="Gorra Freskø negra">
+                <div class="p-6">
+                    <h5 class="text-xl font-bold mb-2">Freskø cap</h5>
+                    <p class="text-gray-700 mb-4">Gorra A1 negra</p>
+                    <a href="#" class="inline-block bg-gray-900 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition-colors">Ver Más</a>
                 </div>
             </div>
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
-                <div class="card" style="width: 18rem;">
-                    <img src="IMG/gorra-fresko2.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Freskø cap</h5>
-                        <p class="card-text">Gorra A1 gris</p>
-                        <a href="#" class="btn btn-primary">Ver Más</a>
-                    </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-500">
+                <img src="IMG/gorra-fresko2.jpg" class="w-full h-64 object-cover" alt="Gorra Freskø gris">
+                <div class="p-6">
+                    <h5 class="text-xl font-bold mb-2">Freskø cap</h5>
+                    <p class="text-gray-700 mb-4">Gorra A1 gris</p>
+                    <a href="#" class="inline-block bg-gray-900 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition-colors">Ver Más</a>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <footer class="bg-dark mt-5 w-100 d-flex flex-column justify-content-center align-items-center">
-  <img src="IMG/fresko-logo.png" class="logo-name" alt="Fresko's logo"/>
-  <div class="d-flex gap-3">
-    <a href="https://www.instagram.com/fresko.tm/" target="_blank">
-      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
-  <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M16,3c-7.16752,0 -13,5.83248 -13,13v18c0,7.16752 5.83248,13 13,13h18c7.16752,0 13,-5.83248 13,-13v-18c0,-7.16752 -5.83248,-13 -13,-13zM16,5h18c6.08648,0 11,4.91352 11,11v18c0,6.08648 -4.91352,11 -11,11h-18c-6.08648,0 -11,-4.91352 -11,-11v-18c0,-6.08648 4.91352,-11 11,-11zM37,11c-1.10457,0 -2,0.89543 -2,2c0,1.10457 0.89543,2 2,2c1.10457,0 2,-0.89543 2,-2c0,-1.10457 -0.89543,-2 -2,-2zM25,14c-6.06329,0 -11,4.93671 -11,11c0,6.06329 4.93671,11 11,11c6.06329,0 11,-4.93671 11,-11c0,-6.06329 -4.93671,-11 -11,-11zM25,16c4.98241,0 9,4.01759 9,9c0,4.98241 -4.01759,9 -9,9c-4.98241,0 -9,-4.01759 -9,-9c0,-4.98241 4.01759,-9 9,-9z"></path></g></g>
-  </svg>
-    </a>
-    <a href="mailto:freskoindumentaria@gmail.com">
-      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
-  <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M14,4c-5.51133,0 -10,4.48867 -10,10v22c0,5.51133 4.48867,10 10,10h22c5.51133,0 10,-4.48867 10,-10v-22c0,-5.51133 -4.48867,-10 -10,-10zM14,6h22c4.43067,0 8,3.56933 8,8v22c0,4.43067 -3.56933,8 -8,8h-22c-4.43067,0 -8,-3.56933 -8,-8v-22c0,-4.43067 3.56933,-8 8,-8zM13,15c-1.64497,0 -3,1.35503 -3,3v14c0,1.64497 1.35503,3 3,3h24c1.64497,0 3,-1.35503 3,-3v-14c0,-1.64497 -1.35503,-3 -3,-3zM13.41406,17h23.16992l-8.90625,8.89258c-1.49279,1.49041 -3.8809,1.49024 -5.37305,-0.00195zM38,18.41211v13.17578l-6.59766,-6.58789zM12,18.41406l6.58594,6.58594l-6.58594,6.58594zM29.98828,26.41211l6.59766,6.58789h-23.17188l6.58594,-6.58594l0.89063,0.89063c2.25585,2.25585 5.94201,2.25751 8.19922,0.00391z"></path></g></g>
-  </svg>
-    </a>
-</div>
-<p class="text-white">Todos los derechos reservados | 2025</p>
-</footer>
+    <footer class="bg-black text-white mt-12 w-full flex flex-col justify-center items-center py-8">
+      <img src="IMG/fresko-logo.png" class="h-8 mb-6" alt="Fresko's logo"/>
+      <div class="flex space-x-6 mb-4">
+        <a href="https://www.instagram.com/fresko.tm/" target="_blank" class="hover:opacity-75 transition-opacity">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256" class="fill-current">
+            <g fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M16,3c-7.16752,0 -13,5.83248 -13,13v18c0,7.16752 5.83248,13 13,13h18c7.16752,0 13,-5.83248 13,-13v-18c0,-7.16752 -5.83248,-13 -13,-13zM16,5h18c6.08648,0 11,4.91352 11,11v18c0,6.08648 -4.91352,11 -11,11h-18c-6.08648,0 -11,-4.91352 -11,-11v-18c0,-6.08648 4.91352,-11 11,-11zM37,11c-1.10457,0 -2,0.89543 -2,2c0,1.10457 0.89543,2 2,2c1.10457,0 2,-0.89543 2,-2c0,-1.10457 -0.89543,-2 -2,-2zM25,14c-6.06329,0 -11,4.93671 -11,11c0,6.06329 4.93671,11 11,11c6.06329,0 11,-4.93671 11,-11c0,-6.06329 -4.93671,-11 -11,-11zM25,16c4.98241,0 9,4.01759 9,9c0,4.98241 -4.01759,9 -9,9c-4.98241,0 -9,-4.01759 -9,-9c0,-4.98241 4.01759,-9 9,-9z"></path></g></g>
+          </svg>
+        </a>
+        <a href="mailto:freskoindumentaria@gmail.com" class="hover:opacity-75 transition-opacity">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256" class="fill-current">
+            <g fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M14,4c-5.51133,0 -10,4.48867 -10,10v22c0,5.51133 4.48867,10 10,10h22c5.51133,0 10,-4.48867 10,-10v-22c0,-5.51133 -4.48867,-10 -10,-10zM14,6h22c4.43067,0 8,3.56933 8,8v22c0,4.43067 -3.56933,8 -8,8h-22c-4.43067,0 -8,-3.56933 -8,-8v-22c0,-4.43067 3.56933,-8 8,-8zM13,15c-1.64497,0 -3,1.35503 -3,3v14c0,1.64497 1.35503,3 3,3h24c1.64497,0 3,-1.35503 3,-3v-14c0,-1.64497 -1.35503,-3 -3,-3zM13.41406,17h23.16992l-8.90625,8.89258c-1.49279,1.49041 -3.8809,1.49024 -5.37305,-0.00195zM38,18.41211v13.17578l-6.59766,-6.58789zM12,18.41406l6.58594,6.58594l-6.58594,6.58594zM29.98828,26.41211l6.59766,6.58789h-23.17188l6.58594,-6.58594l0.89063,0.89063c2.25585,2.25585 5.94201,2.25751 8.19922,0.00391z"></path></g></g>
+          </svg>
+        </a>
+      </div>
+      <p class="text-gray-400 text-sm">Todos los derechos reservados | 2025</p>
+    </footer>
 
-</section>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-      crossorigin="anonymous"
-    ></script>
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
