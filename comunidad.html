@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comunidad - Freskø Streetwear</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+    <style>
+    body {
+        font-family: 'Oswald', sans-serif;
+    }
+
+    nav {
+   
+    font-family: sans-serif; 
+    }
+    </style>
+
+
+</head>
+<body class="bg-gray-100">
+
+   <nav class="bg-black p-4">
+    <div class="container mx-auto flex items-center justify-between relative">
+        <a href="index.html">
+            <img src="IMG/fresko-isotipo.png" alt="Logo" class="h-32 w-auto"/>
+        </a>
+
+        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden lg:block">
+            <img src="IMG/fresko-logo.png" class="h-[70px]" alt="Fresko's logo" />
+        </div>
+
+        <div class="hidden md:flex items-center space-x-2">
+            <a href="index.html" class="text-white hover:bg-gray-800 px-4 py-2 rounded-md transition-colors">Inicio</a>
+            <a href="about.html" class="text-white hover:bg-gray-800 px-4 py-2 rounded-md transition-colors">Nosotros</a>
+            <a href="products.html" class="text-white hover:bg-gray-800 px-4 py-2 rounded-md transition-colors">Artículos</a>
+            <a href="comunidad.html" class="text-white hover:bg-gray-800 px-4 py-2 rounded-md transition-colors">Comunidad</a>
+        </div>
+
+        <div class="md:hidden">
+            <button id="menu-btn" class="text-white focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden mt-4">
+        <a href="index.html" class="block text-white text-center py-2 hover:bg-gray-800 rounded-md">Inicio</a>
+        <a href="about.html" class="block text-white text-center py-2 hover:bg-gray-800 rounded-md">Nosotros</a>
+        <a href="products.html" class="block text-white text-center py-2 hover:bg-gray-800 rounded-md">Artículos</a>
+        <a href="comunidad.html" class="block text-white text-center py-2 hover:bg-gray-800 rounded-md">Comunidad</a>
+    </div>
+</nav>
+
+    <main class="container mx-auto py-10 px-4">
+        <div class="max-w-2xl mx-auto">
+            <div class="bg-white p-4 rounded-lg shadow-md mb-8">
+                <p class="font-bold mb-3 text-lg">Crea una publicación</p>
+                <div class="flex items-center space-x-4">
+                    <img src="https://i.pravatar.cc/50?u=currentuser" alt="Tu Avatar" class="h-12 w-12 rounded-full">
+                    
+                    <div class="relative w-full">
+                        <input type="text" placeholder="¡Comparte tu outfit!" class="w-full bg-gray-100 border-transparent rounded-full py-3 px-4 pr-12 text-lg focus:outline-none focus:ring-2 focus:ring-gray-300" style="font-family: sans-serif;">
+                        <div class="absolute inset-y-0 right-0 flex items-center pr-4">
+                            <svg class="h-6 w-6 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.776 48.776 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="flex justify-end mt-4">
+                    <button class="bg-black text-white px-6 py-2 rounded-md hover:bg-gray-800 transition-colors">Publicar</button>
+                </div>
+            </div>
+
+            <div class="space-y-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-4 flex items-center space-x-3">
+                        <img src="https://i.pravatar.cc/50?u=juan_j" alt="Avatar de Juan" class="h-10 w-10 rounded-full">
+                        <div>
+                            <p class="font-bold text-gray-800">juan_j</p>
+                            <p class="text-xs text-gray-500">hace 2 horas</p>
+                        </div>
+                    </div>
+                    <img src="IMG/publicacion1.jpeg" alt="Outfit hoodie" class="w-11/12 mx-auto block rounded-lg">
+                    <div class="p-4">
+                        <p class="text-gray-700 mb-4">¡Estrenando mi nuevo hoodie de Freskø! Súper cómodo y con mucho estilo. 🖤</p>
+                        <div class="border-t border-gray-200 pt-4">
+                            <div class="flex items-start space-x-3 mb-3">
+                                <img src="https://i.pravatar.cc/50?u=marco_p" alt="Avatar de Marco" class="h-8 w-8 rounded-full">
+                                <div class="bg-gray-100 rounded-lg p-2 w-full">
+                                    <p class="font-semibold text-sm">marco_p</p>
+                                    <p class="text-sm">¡Qué genial! Te queda increíble.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <img src="https://i.pravatar.cc/50?u=ana_dev" alt="Avatar de Ana" class="h-8 w-8 rounded-full">
+                                <div class="bg-gray-100 rounded-lg p-2 w-full">
+                                    <p class="font-semibold text-sm">ana_dev</p>
+                                    <p class="text-sm">Me encanta ese hoodie, yo también lo quiero.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-t border-gray-200 mt-4 pt-4 flex items-center space-x-3">
+                            <img src="https://i.pravatar.cc/50?u=currentuser" alt="Tu Avatar" class="h-8 w-8 rounded-full">
+                            <input type="text" placeholder="Escribe un comentario..." class="w-full bg-gray-100 border-transparent rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-gray-300">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-4 flex items-center space-x-3">
+                        <img src="https://i.pravatar.cc/50?u=leo_style" alt="Avatar de Leo" class="h-10 w-10 rounded-full">
+                        <div>
+                            <p class="font-bold text-gray-800">leo_style</p>
+                            <p class="text-xs text-gray-500">hace 1 día</p>
+                        </div>
+                    </div>
+                    <img src="IMG/publicacion2.jpeg" alt="Outfit de un perro negro" class="w-11/12 mx-auto block rounded-lg">
+                    <div class="p-4">
+                        <p class="text-gray-700 mb-4">La remera perfecta no exis... 🔥 Gracias Freskø.</p>
+                        <div class="border-t border-gray-200 pt-4">
+                            <div class="flex items-start space-x-3">
+                                <img src="https://i.pravatar.cc/50?u=carla_r" alt="Avatar de Carla" class="h-8 w-8 rounded-full">
+                                <div class="bg-gray-100 rounded-lg p-2 w-full">
+                                    <p class="font-semibold text-sm">carla_r</p>
+                                    <p class="text-sm">¡Uff, tremenda!</p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="border-t border-gray-200 mt-4 pt-4 flex items-center space-x-3">
+                            <img src="https://i.pravatar.cc/50?u=currentuser" alt="Tu Avatar" class="h-8 w-8 rounded-full">
+                            <input type="text" placeholder="Escribe un comentario..." class="w-full bg-gray-100 border-transparent rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-gray-300">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black mt-10 w-full flex flex-col justify-center items-center py-6">
+      <img src="IMG/fresko-logo.png" class="h-10 mb-2" alt="Fresko's logo" />
+      <div class="flex gap-4">
+        <a href="https://www.instagram.com/fresko.tm/" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256" style="fill:#ffffff;"><g transform="scale(5.12,5.12)"><path d="M16,3c-7.16752,0 -13,5.83248 -13,13v18c0,7.16752 5.83248,13 13,13h18c7.16752,0 13,-5.83248 13,-13v-18c0,-7.16752 -5.83248,-13 -13,-13zM16,5h18c6.08648,0 11,4.91352 11,11v18c0,6.08648 -4.91352,11 -11,11h-18c-6.08648,0 -11,-4.91352 -11,-11v-18c0,-6.08648 4.91352,-11 11,-11zM37,11c-1.10457,0 -2,0.89543 -2,2c0,1.10457 0.89543,2 2,2c1.10457,0 2,-0.89543 2,-2c0,-1.10457 -0.89543,-2 -2,-2zM25,14c-6.06329,0 -11,4.93671 -11,11c0,6.06329 4.93671,11 11,11c6.06329,0 11,-4.93671 11,-11c0,-6.06329 -4.93671,-11 -11,-11zM25,16c4.98241,0 9,4.01759 9,9c0,4.98241 -4.01759,9 -9,9c-4.98241,0 -9,-4.01759 -9,-9c0,-4.98241 4.01759,-9 9,-9z"></path></g></g></svg>
+        </a>
+        <a href="mailto:freskoindumentaria@gmail.com">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256" style="fill:#ffffff;"><g transform="scale(5.12,5.12)"><path d="M14,4c-5.51133,0 -10,4.48867 -10,10v22c0,5.51133 4.48867,10 10,10h22c5.51133,0 10,-4.48867 10,-10v-22c0,-5.51133 -4.8867,-10 -10,-10zM14,6h22c4.43067,0 8,3.56933 8,8v22c0,4.43067 -3.56933,8 -8,8h-22c-4.43067,0 -8,-3.56933 -8,-8v-22c0,-4.43067 3.56933,-8 8,-8zM13,15c-1.64497,0 -3,1.35503 -3,3v14c0,1.64497 1.35503,3 3,3h24c1.64497,0 3,-1.35503 3,-3v-14c0,-1.64497 -1.35503,-3 -3,-3zM13.41406,17h23.16992l-8.90625,8.89258c-1.49279,1.49041 -3.8809,1.49024 -5.37305,-0.00195zM38,18.41211v13.17578l-6.59766,-6.58789zM12,18.41406l6.58594,6.58594l-6.58594,6.58594zM29.98828,26.41211l6.59766,6.58789h-23.17188l6.58594,-6.58594l0.89063,0.89063c2.25585,2.25585 5.94201,2.25751 8.19922,0.00391z"></path></g></g></svg>
+        </a>
+      </div>
+      <p class="text-white text-sm mt-4">Todos los derechos reservados | 2025</p>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
