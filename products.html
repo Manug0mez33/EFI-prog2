@@ -100,44 +100,41 @@
           <div class="w-80 flex">
             <h4 class="text-2xl font-bold mb-2">Probador</h4>
           </div>
-          <div class="flex gap-5 p-5">
-            <div class="w-64 h-114">
+          <div class="flex lg:gap-5 lg:p-5">
+            <div class="w-64 aspect-[9/16] hidden lg:block">
               <img src="/IMG/ejemplo_probador.png" alt="" class="object-fit">
             </div>
             <div class="flex flex-col w-full">
-              <div>
-                <p id="productTitle" class="text-gray-800 font-bold mb-2"></p>
+              <div class="flex flex-col text-center lg:text-left">
+                <p id="productTitle" class="text-gray-800 text-xl lg:text-2xl font-bold mb-2"></p>
                 <h3 class="font-bold mb-2">TALLES DISPONIBLES</h3>
-                <div id="productSizes" class="flex gap-2 mb-6"></div>
+                <div id="productSizes" class="flex gap-2 mb-6 justify-center lg:justify-start"></div>
+              </div>
+              <div class="block lg:hidden flex justify-center">
+                <div class="w-32 aspect-[9/16]">
+                  <img src="/IMG/ejemplo_probador.png" alt="" class="object-fit">
+                </div>
               </div>
               <div class="w-full justify-self-center flex p-4 gap-2 justify-center">
+                <!-- Div para subir imagen -->
                 <div class="flex items-center justify-center">
                   <label
                     for="file-upload"
-                    class="flex flex-col items-center justify-center w-64 h-40 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100 transition"
+                    class="flex flex-col items-center justify-center w-32 aspect-[16/10] lg:w-64 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100 transition"
                   >
-                    <!-- Ícono de Font Awesome -->
-                    <i class="fa-solid fa-cloud-arrow-up text-4xl text-gray-400 mb-2"></i>
-
-                    <!-- Texto -->
+                    <i class="fa-solid fa-cloud-arrow-up text-2xl lg:text-4xl text-gray-400 mb-2"></i>
                     <span class="text-sm text-gray-500">Select image</span>
-
-                    <!-- Input oculto -->
                     <input id="file-upload" type="file" class="hidden" accept="image/*" />
                   </label>
                 </div>
+                <!-- Div para tomar foto -->
                 <div class="flex items-center justify-center">
                   <label
                     for="file-upload"
-                    class="flex flex-col items-center justify-center w-64 h-40 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100 transition"
+                    class="flex flex-col items-center justify-center w-32 aspect-[16/10] lg:w-64 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100 transition"
                   >
-                    <!-- Ícono de Font Awesome -->
-                    <i class="fa-solid fa-camera text-4xl text-gray-400 mb-2"></i>
-
-                    <!-- Texto -->
+                    <i class="fa-solid fa-camera text-2xl lg:text-4xl text-gray-400 mb-2"></i>
                     <span class="text-sm text-gray-500">Take photo</span>
-
-                    <!-- Input oculto -->
                     <input id="file-upload" type="file" class="hidden" accept="image/*" capture="environment"/>
                   </label>
                 </div>
@@ -153,6 +150,7 @@
         </div>
         </div>
      </section>
+     <!-------------------------->
 
     <footer class="bg-black text-white mt-12 w-full flex flex-col justify-center items-center py-8">
       <img src="IMG/fresko-logo.png" class="h-8 mb-6" alt="Fresko's logo"/>

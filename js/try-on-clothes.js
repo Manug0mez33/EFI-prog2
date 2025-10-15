@@ -22,9 +22,11 @@ document.querySelectorAll('.probarPrenda').forEach(btn => {
             });
         }
 
+        // Agrega clases para mostrar el modal
         modal.classList.remove('hidden');
         modal.classList.add('flex');
         
+        // Animacion de entrada
         setTimeout(() => {
             modalContent.classList.remove("scale-95", "opacity-0");
             modalContent.classList.add("scale-100", "opacity-100");
@@ -32,11 +34,24 @@ document.querySelectorAll('.probarPrenda').forEach(btn => {
     });
 });
 
+// Cerrar el Modal con el boton
 closeModal.addEventListener('click', () => {
+    close()
+});
+
+// Cerrar el Modal clickeando afuera de el
+modal.addEventListener('click', e => {
+    if (e.target === modal){
+        close()
+    }
+  });
+
+// Acciones que cierran el modal
+const close = () =>{
     modalContent.classList.add("scale-95", "opacity-0");
     modalContent.classList.remove("scale-100", "opacity-100");
     setTimeout(() => {
         modal.classList.add("hidden");
         modal.classList.remove("flex");
     }, 200);
-});
+}
