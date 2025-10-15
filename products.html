@@ -7,7 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="CSS/styles.css" /> 
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body class="bg-gray-100">
 
@@ -92,6 +93,66 @@
      </section>
     <!------------------------------->
 
+    <!-- MODAL "PROBAR" SECTION -->
+     <section>
+      <div id="modalProbador" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
+        <div class="bg-white rounded-lg shadow-lg w-11/12 max-w-4xl p-6 relative transform scale-95 opacity-0 transition-all duration-200">
+          <div class="w-80 flex">
+            <h4 class="text-2xl font-bold mb-2">Probador</h4>
+          </div>
+          <div class="flex gap-5 p-5">
+            <div class="w-64 h-114">
+              <img src="/IMG/ejemplo_probador.png" alt="" class="object-fit">
+            </div>
+            <div class="flex flex-col w-full">
+              <div>
+                <p id="productTitle" class="text-gray-800 font-bold mb-2"></p>
+                <h3 class="font-bold mb-2">TALLES DISPONIBLES</h3>
+                <div id="productSizes" class="flex gap-2 mb-6"></div>
+              </div>
+              <div class="w-full justify-self-center flex p-4 gap-2 justify-center">
+                <div class="flex items-center justify-center">
+                  <label
+                    for="file-upload"
+                    class="flex flex-col items-center justify-center w-64 h-40 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100 transition"
+                  >
+                    <!-- Ícono de Font Awesome -->
+                    <i class="fa-solid fa-cloud-arrow-up text-4xl text-gray-400 mb-2"></i>
+
+                    <!-- Texto -->
+                    <span class="text-sm text-gray-500">Select image</span>
+
+                    <!-- Input oculto -->
+                    <input id="file-upload" type="file" class="hidden" accept="image/*" />
+                  </label>
+                </div>
+                <div class="flex items-center justify-center">
+                  <label
+                    for="file-upload"
+                    class="flex flex-col items-center justify-center w-64 h-40 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100 transition"
+                  >
+                    <!-- Ícono de Font Awesome -->
+                    <i class="fa-solid fa-camera text-4xl text-gray-400 mb-2"></i>
+
+                    <!-- Texto -->
+                    <span class="text-sm text-gray-500">Take photo</span>
+
+                    <!-- Input oculto -->
+                    <input id="file-upload" type="file" class="hidden" accept="image/*" capture="environment"/>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <p class="text-gray-600 mb-4">Tómate una foto como en el ejemplo y elige tu talle para probar la ropa con nuestra IA.</p>
+          </div>
+          <div>
+            <button id="closeModalProbador" class="absolute top-4 right-4 text-gray-500 hover:text-black text-2xl">&times;</button>
+          </div>
+        </div>
+        </div>
+     </section>
 
     <footer class="bg-black text-white mt-12 w-full flex flex-col justify-center items-center py-8">
       <img src="IMG/fresko-logo.png" class="h-8 mb-6" alt="Fresko's logo"/>
@@ -118,6 +179,7 @@
             mobileMenu.classList.toggle('hidden');
         });
     </script>
-    <script src="js/see-more.js"></script>
-</body>
+    <script type="module" src="js/see-more.js"></script>
+    <script type="module" src="js/try-on-clothes.js"></script>
+  </body>
 </html>
