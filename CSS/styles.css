@@ -46,13 +46,14 @@ body {
 }
 
 #contenedor2 {
-    background-image: url("../IMG/fresko-poster.jpg");
+    background-image: 
+        radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(168, 168, 168, 1) 100%), 
+        url("../IMG/fresko-poster.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: #000;
     padding: 5% 10%;
-    height: 900px;
+    height: 910px;
 }
 
 /* Typewriter Animation */
