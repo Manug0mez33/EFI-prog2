@@ -1,4 +1,4 @@
-const products = [
+export const products = [
     {
         id: 1,
         name: "Freskø GVNG",
@@ -93,7 +93,7 @@ products.forEach(p => {
     <div class="p-6">
       <h5 class="text-xl font-bold mb-2">${p.name}</h5>
       <p class="text-gray-700 mb-4">${p.placeholder}</p>
-      <a href="#" class="inline-block bg-gray-900 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition-colors">Probar Prenda</a>
+      <button data-id="${p.id}" class="probarPrenda inline-block bg-gray-900 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition-colors">Probar Prenda</button>
       <button data-id="${p.id}" class="verMas inline-block bg-gray-900 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition-colors ml-2">Ver Más</button>
     </div>
   `;
