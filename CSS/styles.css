@@ -35,6 +35,72 @@ body {
     height: 900px;
 }
 
+/* Animación del logo principal: efecto flash (parpadeo) y giro puntual */
+@keyframes flash {
+  0%   { opacity: 1; transform: scale(1); }
+  25%  { opacity: 0.15; transform: scale(0.98); }
+  50%  { opacity: 1; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Wrapper para aislar la rotación del movimiento de flotación */
+#main-logo-wrapper {
+  display: inline-block;
+  transform-origin: center;
+}
+
+/* Aplica el "flash" al logo */
+#main-logo {
+  display: block;
+  height: 8rem; /* corresponde aproximadamente a h-32 */
+  width: auto;
+  /* sin animación en el logo izquierdo */
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Efecto al pasar el cursor */
+#main-logo:hover {
+  transform: scale(1.06) rotate(-2deg);
+}
+
+/* Clase que activa el giro puntual desde JS */
+.logo-spin {
+  animation: spin 0.6s linear 1;
+}
+
+/* Aplica el "flash" al logo del centro (center-logo) */
+#center-logo {
+  display: block;
+  height: 4.375rem; /* ~70px para coincidir con h-[70px] */
+  width: auto;
+  animation: flash 1.8s ease-in-out infinite;
+  transition: transform .25s ease, opacity .2s ease;
+}
+
+/* Mantener hover si quieres efecto al pasar */
+#center-logo:hover {
+  transform: scale(1.06) rotate(-2deg);
+}
+
+/* Respetar preferencia de reducir movimiento */
+@media (prefers-reduced-motion: reduce) {
+  #main-logo,
+  #main-logo-wrapper {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  #center-logo {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
 #contenedor h1 {
     font-size: 140px;
     padding-bottom: 175px;
@@ -47,7 +113,7 @@ body {
 
 #contenedor2 {
     background-image: 
-        radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(168, 168, 168, 1) 100%), 
+        radial-gradient(circle, rgba(164, 7, 7, 0) 0%, rgba(168, 168, 168, 1) 100%), 
         url("../IMG/fresko-poster.jpg");
     background-size: contain;
     background-repeat: no-repeat;
