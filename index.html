@@ -17,21 +17,21 @@
     </style>
   </head>
   <body>
-    <nav class="bg-black p-4">
+    <nav class="p-4">
       <div class="container mx-auto flex items-center justify-between relative">
         <a href="#">
-          <img src="IMG/fresko-isotipo.png" alt="Logo" class="h-32 w-auto"/>
+          <img src="IMG/isotipo-rojo.png" alt="Logo" class="h-[100px] w-auto"/>
         </a>
 
         <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden lg:block">
-          <img src="IMG/fresko-logo.png" class="h-[70px]" alt="Fresko's logo" />
+          <img src="IMG/logo-rojo.png" class="h-[100px]" alt="Fresko's logo" />
         </div>
 
         <div class="hidden md:flex items-center space-x-2">
-            <a href="#" class="text-white hover:bg-gray-800 px-4 py-2 rounded-md transition-colors">Inicio</a>
-            <a href="about.html" class="text-white hover:bg-gray-800 px-4 py-2 rounded-md transition-colors">Nosotros</a>
-            <a href="products.html" class="text-white hover:bg-gray-800 px-4 py-2 rounded-md transition-colors">Artículos</a>
-            <a href="comunidad.html" class="text-white hover:bg-gray-800 px-4 py-2 rounded-md transition-colors">Comunidad</a>
+            <a href="#" class="text-white hover:bg-[#D24D57] px-4 py-2 rounded-md transition-colors">Inicio</a>
+            <a href="about.html" class="text-white hover:bg-[#D24D57] px-4 py-2 rounded-md transition-colors">Nosotros</a>
+            <a href="products.html" class="text-white hover:bg-[#D24D57] px-4 py-2 rounded-md transition-colors">Artículos</a>
+            <a href="comunidad.html" class="text-white hover:bg-[#D24D57] px-4 py-2 rounded-md transition-colors">Comunidad</a>
         </div>
 
         <div class="md:hidden">
@@ -44,10 +44,10 @@
       </div>
 
       <div id="mobile-menu" class="hidden md:hidden mt-4">
-        <a href="#" class="block text-white text-center py-2 hover:bg-gray-800 rounded-md">Inicio</a>
-        <a href="about.html" class="block text-white text-center py-2 hover:bg-gray-800 rounded-md">Nosotros</a>
-        <a href="products.html" class="block text-white text-center py-2 hover:bg-gray-800 rounded-md">Artículos</a>
-        <a href="comunidad.html" class="block text-white text-center py-2 hover:bg-gray-800 rounded-md">Comunidad</a>
+        <a href="#" class="block text-white text-center py-2 hover:bg-[#D24D57] rounded-md">Inicio</a>
+        <a href="about.html" class="block text-white text-center py-2 hover:bg-[#D24D57] rounded-md">Nosotros</a>
+        <a href="products.html" class="block text-white text-center py-2 hover:bg-[#D24D57] rounded-md">Artículos</a>
+        <a href="comunidad.html" class="block text-white text-center py-2 hover:bg-[#D24D57] rounded-md">Comunidad</a>
       </div>
     </nav>  
 
@@ -66,7 +66,7 @@
       </div>
     </div>
 
-    <div class="bg-black text-white p-6 flex justify-center items-center">
+    <div class="bg-[#1A1A1A] text-white p-6 flex justify-center items-center">
       <h1 class="text-3xl font-bold text-center">Nuestros productos</h1>
     </div>
 
@@ -203,25 +203,32 @@
       </div>
     </section>
 
-    <section>
-      <a href="products.html" class="no-underline text-black">
-        <div class="flex gap-2 items-center justify-center p-4">
-          <h3 class="text-lg font-semibold">Ver más</h3>
-          <img
-            width="30"
-            height="30"
-            src="https://img.icons8.com/ios/50/enter-2.png"
-            alt="enter-2"
-          />
-        </div>
+    <section class="flex justify-center pt-4">
+      <a
+        href="products.html"
+        class="text-center rounded-full
+          victoria-three group  inline-flex gap-2 items-center justify-center p-4 no-underline
+          text-black          hover:text-white    relative overflow-hidden z-10 border-2 border-[#D24D57] transition-all duration-300 ease-in-out "
+      >
+        <h3 class="text-lg font-semibold">Ver más</h3>
+        <img
+          width="30"
+          height="30"
+          src="https://img.icons8.com/ios/50/enter-2.png"
+          alt="enter-2"
+          class="
+            transition-all duration-300 ease-in-out
+            group-hover:invert group-hover:brightness-200 "
+        />
       </a>
     </section>
 
+
     <footer
-      class="bg-black mt-10 w-full flex flex-col justify-center items-center py-6"
+      class="mt-10 w-full flex flex-col justify-center items-center py-6"
     >
       <img
-        src="IMG/fresko-logo.png"
+        src="IMG/logo-rojo.png"
         class="h-10 mb-2"
         alt="Fresko's logo"
       />
