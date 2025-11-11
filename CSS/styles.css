@@ -247,3 +247,28 @@ a.victoria-three:hover::after {
         padding-bottom: 100px;
     }
 }
+
+.add-to-cart-btn::after {
+    content: '1';
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background-color: #D24D57;
+    color: white;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.2s ease-in-out;
+}
+
+.add-to-cart-btn.item-in-cart::after {
+    opacity: 1;
+    transform: scale(1);
+}

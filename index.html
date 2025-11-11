@@ -7,14 +7,8 @@
     <link rel="stylesheet" href="CSS/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style type="text/tailwindcss">
-      @layer utilities {
-        .bordered-container {
-          @apply border-2 border-white rounded-lg p-4;
-        }
-      }
-    </style>
   </head>
   <body>
     <nav class="p-4">
@@ -32,6 +26,9 @@
             <a href="about.html" class="text-white hover:bg-[#D24D57] px-4 py-2 rounded-md transition-colors">Nosotros</a>
             <a href="products.html" class="text-white hover:bg-[#D24D57] px-4 py-2 rounded-md transition-colors">Artículos</a>
             <a href="comunidad.html" class="text-white hover:bg-[#D24D57] px-4 py-2 rounded-md transition-colors">Comunidad</a>
+            <a href="#" class="nav-cart-icon text-white hover:text-[#D24D57] px-4 py-2 rounded-md transition-colors">
+                <i class="fa-solid fa-cart-shopping text-xl"></i>
+            </a>
         </div>
 
         <div class="md:hidden">
@@ -48,6 +45,9 @@
         <a href="about.html" class="block text-white text-center py-2 hover:bg-[#D24D57] rounded-md">Nosotros</a>
         <a href="products.html" class="block text-white text-center py-2 hover:bg-[#D24D57] rounded-md">Artículos</a>
         <a href="comunidad.html" class="block text-white text-center py-2 hover:bg-[#D24D57] rounded-md">Comunidad</a>
+        <a href="#" class="block text-white text-center py-2 hover:bg-[#D24D57] rounded-md">
+            <i class="fa-solid fa-cart-shopping text-xl"></i>
+        </a>
       </div>
     </nav>  
 
