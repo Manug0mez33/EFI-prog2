@@ -91,10 +91,15 @@ products.forEach(p => {
   card.innerHTML = `
     <img src="${p.img}" class="w-full h-64 object-cover" alt="${p.name}">
     <div class="p-6">
-      <h5 class="text-xl font-bold mb-2">${p.name}</h5>
-      <p class="text-gray-700 mb-4">${p.placeholder}</p>
-      <button data-id="${p.id}" class="probarPrenda inline-block bg-gray-900 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition-colors">Probar Prenda</button>
-      <button data-id="${p.id}" class="verMas inline-block bg-gray-900 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition-colors ml-2">Ver Más</button>
+        <h5 class="text-xl font-bold mb-2">${p.name}</h5>
+        <p class="text-gray-700 mb-4 h-12">${p.placeholder}</p>
+        <div class="flex flex-wrap items-center justify-between gap-2">
+            <div class="flex gap-2">
+                <button data-id="${p.id}" class="probarPrenda inline-block bg-gray-900 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition-colors text-sm">Probar</button>
+                <button data-id="${p.id}" class="verMas inline-block bg-gray-900 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition-colors text-sm">Ver Más</button>
+            </div>
+            <button class="addToCart p-2 rounded-full hover:bg-gray-200 transition-colors"><i class="fa-solid fa-cart-shopping text-xl text-gray-700"></i></button>
+        </div>
     </div>
   `;
   container.appendChild(card);
@@ -161,3 +166,17 @@ function close() {
     modal.classList.remove("flex");
   }, 200);
 }
+
+document.addEventListener("click", e => {
+    const cartBtn = e.target.closest(".addToCart");
+    if (cartBtn) {
+        const icon = cartBtn.querySelector("i");
+        if (icon.classList.contains("fa-cart-shopping")) {
+            icon.classList.remove("fa-cart-shopping");
+            icon.classList.add("fa-check", "text-green-500");
+        } else {
+            icon.classList.remove("fa-check", "text-green-500");
+            icon.classList.add("fa-cart-shopping");
+        }
+    }
+});
